@@ -1,0 +1,62 @@
+<div class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-center">
+        <span class="text-[#c41e3a]">Difesa Personale</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Proteggiti con Fiducia</h2>
+      <p class="mb-4">Il nostro corso di Difesa Personale è progettato per fornire a chiunque, indipendentemente dall'età o dalla condizione fisica, le competenze necessarie per proteggersi in situazioni di pericolo. Ci concentriamo su tecniche pratiche, efficaci e facili da apprendere, che possono essere applicate in scenari di vita reale.</p>
+      <p>L'obiettivo principale è sviluppare la consapevolezza, la fiducia e le abilità per prevenire, evitare e, se necessario, affrontare situazioni di minaccia personale.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Principi Fondamentali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Prevenzione e Consapevolezza</h3>
+          <p>Impariamo a riconoscere e evitare situazioni potenzialmente pericolose, sviluppando una maggiore consapevolezza dell'ambiente circostante.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Semplicità ed Efficacia</h3>
+          <p>Le tecniche insegnate sono semplici da ricordare e eseguire, ma altamente efficaci in situazioni di stress reale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Tecniche Principali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let technique of techniques" class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">{{ technique.name }}</h3>
+          <p>{{ technique.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Benefici della Difesa Personale</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Unisciti al Nostro Corso</h2>
+      <p class="mb-4">Il nostro corso di Difesa Personale è aperto a tutti, indipendentemente dall'età, dal genere o dal livello di forma fisica. Che tu sia uno studente, un professionista o un genitore, le competenze che acquisirai in questo corso ti aiuteranno a sentirti più sicuro e preparato nella vita quotidiana.</p>
+      <a href="#" class="inline-block bg-[#c41e3a] text-[#f4f4f4] px-6 py-3 rounded-none font-semibold text-lg hover:bg-[#d4af37] transition-colors duration-300">
+        Prenota una Lezione di Prova
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Arashi Sports Club. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</div>

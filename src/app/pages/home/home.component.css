@@ -1,0 +1,10 @@
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Assicurati che il contenitore della mappa abbia una dimensione definita */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}

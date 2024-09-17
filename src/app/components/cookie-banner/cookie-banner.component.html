@@ -1,0 +1,24 @@
+<div *ngIf="showBanner" class="fixed bottom-0 left-0 right-0 bg-gray-100 border-t border-gray-200 p-4 shadow-md z-50">
+  <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+    <p class="text-sm text-gray-700 mb-4 md:mb-0 md:mr-4">
+      Utilizziamo i cookie per migliorare la tua esperienza sul nostro sito. Accettando, acconsenti all'uso dei cookie in conformità con la nostra
+      <a routerLink="/privacy-policy" class="text-[#c41e3a] hover:underline">
+        Politica sulla Privacy
+      </a>.
+    </p>
+    <div class="flex space-x-4">
+      <button
+        (click)="acceptCookies()"
+        class="bg-[#c41e3a] text-white px-4 py-2 rounded hover:bg-[#d4af37] transition-colors duration-300"
+      >
+        Accetta
+      </button>
+      <button
+        (click)="declineCookies()"
+        class="bg-gray-200 text-gray-700 px-4 py-2 rounded hover:bg-gray-300 transition-colors duration-300"
+      >
+        Rifiuta
+      </button>
+    </div>
+  </div>
+</div>

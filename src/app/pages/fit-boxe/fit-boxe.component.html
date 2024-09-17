@@ -1,0 +1,62 @@
+<div class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-center">
+        <span class="text-[#c41e3a]">Fit Boxe</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Allenamento Dinamico e Divertente</h2>
+      <p class="mb-4">Il Fit Boxe è un allenamento ad alta intensità che combina tecniche di boxe con esercizi di fitness. Questo corso offre un modo divertente ed efficace per migliorare la forma fisica, bruciare calorie e imparare le basi della boxe, il tutto in un ambiente energico e motivante.</p>
+      <p>Adatto a tutti i livelli di fitness, il Fit Boxe ti permette di sfidare te stesso, migliorare la tua resistenza e sviluppare una maggiore forza e coordinazione.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Principi Fondamentali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Intensità e Ritmo</h3>
+          <p>Le lezioni sono strutturate per mantenere un'alta intensità, alternando periodi di lavoro intenso a brevi recuperi, ottimizzando il consumo calorico e il miglioramento cardiovascolare.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Tecnica e Forma</h3>
+          <p>Mentre ci si concentra sul fitness, si pone anche attenzione alla corretta esecuzione delle tecniche di boxe, migliorando la postura e prevenendo infortuni.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Tecniche Principali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let technique of techniques" class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">{{ technique.name }}</h3>
+          <p>{{ technique.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Benefici del Fit Boxe</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Unisciti alle Nostre Lezioni</h2>
+      <p class="mb-4">Le nostre lezioni di Fit Boxe sono aperte a tutti, indipendentemente dal livello di fitness o dall'esperienza nella boxe. Che tu sia un principiante alla ricerca di un nuovo modo per metterti in forma o un atleta che vuole diversificare il proprio allenamento, il nostro programma di Fit Boxe è perfetto per te.</p>
+      <a href="#" class="inline-block bg-[#c41e3a] text-[#f4f4f4] px-6 py-3 rounded-none font-semibold text-lg hover:bg-[#d4af37] transition-colors duration-300">
+        Prenota una Lezione di Prova
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Arashi21100. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,160 @@
+<div class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold tracking-wider">
+        嵐 <span class="text-[#c41e3a]">ARASHI</span>
+      </a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#disciplines" class="hover:text-[#d4af37] transition-colors duration-300">Discipline</a>
+        <a href="#schedule" class="hover:text-[#d4af37] transition-colors duration-300">Orario</a>
+        <a href="#contact" class="hover:text-[#d4af37] transition-colors duration-300">Contatto</a>
+      </div>
+      <button (click)="toggleMobileMenu()" class="md:hidden">
+        <i class="fas" [ngClass]="{'fa-times': mobileMenuOpen, 'fa-bars': !mobileMenuOpen}"></i>
+      </button>
+    </nav>
+    <div *ngIf="mobileMenuOpen" class="md:hidden bg-[#1a1a1a] text-[#f4f4f4] py-2 absolute w-full">
+      <a href="#disciplines" class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300">Discipline</a>
+      <a href="#schedule" class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300">Orario</a>
+      <a href="#contact" class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300">Contatto</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="relative h-[80vh] bg-[url('/assets/images/hero-background.jpg')] bg-cover bg-center">
+      <div class="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <div class="text-center">
+          <h1 class="text-6xl md:text-8xl font-bold text-[#f4f4f4] mb-4 tracking-widest">
+            嵐 <span class="text-[#c41e3a]">ARASHI</span>
+          </h1>
+          <p class="text-xl md:text-2xl text-[#f4f4f4] mb-8 tracking-wide">Libera il Tuo Guerriero Interiore</p>
+          <a href="#disciplines" class="bg-[#c41e3a] text-[#f4f4f4] px-8 py-4 rounded-none font-semibold text-lg hover:bg-[#d4af37] transition-colors duration-300">
+            Esplora le Nostre Discipline
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="disciplines" class="py-20 bg-[#f4f4f4]">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a1a]">Le Nostre Discipline</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+          <div *ngFor="let discipline of disciplines" class="border-l-4 border-[#c41e3a] pl-4 py-4" (click)="navigateTo(discipline.route)">
+            <h3 class="text-3xl font-semibold mb-2 text-[#1a1a1a]">{{ discipline.kanji }}</h3>
+            <h4 class="text-xl mb-2 text-[#787878]">{{ discipline.name }}</h4>
+            <p class="text-[#1a1a1a]">{{ discipline.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="schedule" class="py-20 bg-[#1a1a1a] text-[#f4f4f4]">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center text-[#d4af37]">Orario dei Corsi</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr>
+                <th class="py-3 px-4 text-left border-b border-[#787878]">Giorno</th>
+                <th class="py-3 px-4 text-left border-b border-[#787878]">Corsi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let day of schedule" class="border-b border-[#787878]">
+                <td class="py-3 px-4 font-semibold">{{ day.day }}</td>
+                <td class="py-3 px-4">
+                  <div *ngFor="let class of day.classes">{{ class }}</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-[#f4f4f4]">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold mb-12 text-center text-[#1a1a1a]">Contattaci</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <form class="space-y-6">
+              <div>
+                <label for="name" class="block mb-2 font-semibold text-[#1a1a1a]">Nome</label>
+                <input type="text" id="name" class="w-full px-4 py-2 bg-[#f4f4f4] border-b-2 border-[#1a1a1a] focus:outline-none focus:border-[#c41e3a] transition-colors duration-300" required>
+              </div>
+              <div>
+                <label for="email" class="block mb-2 font-semibold text-[#1a1a1a]">Email</label>
+                <input type="email" id="email" class="w-full px-4 py-2 bg-[#f4f4f4] border-b-2 border-[#1a1a1a] focus:outline-none focus:border-[#c41e3a] transition-colors duration-300" required>
+              </div>
+              <div>
+                <label for="message" class="block mb-2 font-semibold text-[#1a1a1a]">Messaggio</label>
+                <textarea id="message" rows="4" class="w-full px-4 py-2 bg-[#f4f4f4] border-b-2 border-[#1a1a1a] focus:outline-none focus:border-[#c41e3a] transition-colors duration-300" required></textarea>
+              </div>
+              <button type="submit" class="bg-[#1a1a1a] text-[#f4f4f4] px-6 py-3 font-semibold text-lg hover:bg-[#c41e3a] transition-colors duration-300">
+                Invia Messaggio
+              </button>
+            </form>
+          </div>
+          <div class="space-y-6">
+            <div class="flex items-center">
+              <i class="fas fa-envelope w-6 h-6 mr-2 text-[#c41e3a]"></i>
+              <span>arashi21100&#64;gmail.com</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-phone w-6 h-6 mr-2 text-[#c41e3a]"></i>
+              <span>+39 392 8111970 (Pippo) – 3923684001 (Paolo)</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt w-6 h-6 mr-2 text-[#c41e3a]"></i>
+              <span>Via Donatello 1, 21100 Varese</span>
+            </div>
+            <div class="h-64 bg-[#1a1a1a] rounded-none">
+              <div class="h-full flex items-center justify-center text-[#f4f4f4]">
+
+                  <div id="map" class="w-[424px] h-[424px] md:w-[707px] md:h-[707px] "></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-[#d4af37]">Arashi Sports Club</h3>
+          <p>Potenziamo gli individui attraverso le arti marziali e l'autodifesa dal 2005.</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-[#d4af37]">Link Rapidi</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-[#c41e3a] transition-colors duration-300">Home</a></li>
+            <li><a href="#disciplines" class="hover:text-[#c41e3a] transition-colors duration-300">Discipline</a></li>
+            <li><a href="#schedule" class="hover:text-[#c41e3a] transition-colors duration-300">Orario</a></li>
+            <li><a href="#contact" class="hover:text-[#c41e3a] transition-colors duration-300">Contatto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-[#d4af37]">Seguici</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-[#f4f4f4] hover:text-[#c41e3a] transition-colors duration-300">
+              <i class="fab fa-facebook w-6 h-6"></i>
+            </a>
+            <a href="#" class="text-[#f4f4f4] hover:text-[#c41e3a] transition-colors duration-300">
+              <i class="fab fa-instagram w-6 h-6"></i>
+            </a>
+            <a href="#" class="text-[#f4f4f4] hover:text-[#c41e3a] transition-colors duration-300">
+              <i class="fab fa-twitter w-6 h-6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 text-center text-[#787878]">
+        &copy; 2023 Arashi Sports Club. Tutti i diritti riservati.
+      </div>
+    </div>
+  </footer>
+</div>

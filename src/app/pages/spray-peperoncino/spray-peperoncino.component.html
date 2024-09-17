@@ -1,0 +1,62 @@
+<div class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-center">
+        <span class="text-[#c41e3a]">Spray al Peperoncino</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Autodifesa Efficace e Legale</h2>
+      <p class="mb-4">Il nostro corso sull'uso dello Spray al Peperoncino offre una formazione completa su come utilizzare questo strumento di autodifesa in modo sicuro, efficace e legale. Lo spray al peperoncino è un deterrente non letale che può fornire un vantaggio cruciale in situazioni di pericolo.</p>
+      <p>Imparerai non solo le tecniche di utilizzo, ma anche le implicazioni legali, le precauzioni di sicurezza e come integrare l'uso dello spray con altre tecniche di difesa personale.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Principi Fondamentali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Sicurezza e Responsabilità</h3>
+          <p>Enfatizziamo l'importanza di un uso responsabile e sicuro dello spray al peperoncino, insegnando quando e come utilizzarlo in modo appropriato.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Pratica e Preparazione</h3>
+          <p>Attraverso esercitazioni pratiche, gli studenti acquisiscono la confidenza necessaria per utilizzare lo spray in modo efficace in situazioni di stress.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Tecniche Principali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let technique of techniques" class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">{{ technique.name }}</h3>
+          <p>{{ technique.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Benefici del Corso</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Partecipa al Nostro Corso</h2>
+      <p class="mb-4">Il nostro corso sull'uso dello Spray al Peperoncino è adatto a chiunque desideri aumentare la propria sicurezza personale. Che tu sia un principiante nella difesa personale o un praticante esperto, questo corso ti fornirà competenze preziose per la tua sicurezza.</p>
+      <a href="#" class="inline-block bg-[#c41e3a] text-[#f4f4f4] px-6 py-3 rounded-none font-semibold text-lg hover:bg-[#d4af37] transition-colors duration-300">
+        Iscriviti al Corso
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Arashi Sports Club. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,62 @@
+<div id="judo" class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-center">
+         <span class="text-[#c41e3a]">Judo</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">La Via della Cedevolezza</h2>
+      <p class="mb-4">Il Judo, che significa "via della cedevolezza", è un'arte marziale e sport olimpico sviluppato in Giappone nel 1882 da Jigoro Kano. Basato sui principi dell'uso efficiente dell'energia fisica e mentale, il Judo insegna non solo tecniche di combattimento, ma anche valori come il rispetto, la cortesia e l'autocontrollo.</p>
+      <p>Nel Judo, l'obiettivo è sconfiggere l'avversario usando la sua forza contro di lui, piuttosto che opporsi direttamente. Questo principio si estende oltre il tatami, insegnando ai praticanti come affrontare le sfide della vita con saggezza e flessibilità.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Principi Fondamentali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">柔よく剛を制す (Jū yoku gō o seisu)</h3>
+          <p>"La cedevolezza controlla la forza" - Questo principio insegna che la flessibilità e l'adattabilità possono superare la forza bruta.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">精力善用 (Seiryoku zen'yō)</h3>
+          <p>"Massima efficienza con il minimo sforzo" - Incoraggia l'uso intelligente delle proprie risorse, sia fisiche che mentali.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Tecniche Principali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let technique of techniques" class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">{{ technique.name }}</h3>
+          <p>{{ technique.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Benefici del Judo</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Unisciti al Nostro Dojo</h2>
+      <p class="mb-4">Che tu sia un principiante curioso o un atleta esperto, il nostro dojo di Judo ti accoglie per iniziare o continuare il tuo viaggio nella "via della cedevolezza". Le nostre classi sono strutturate per adattarsi a tutti i livelli di abilità e fitness.</p>
+      <a href="#" class="inline-block bg-[#c41e3a] text-[#f4f4f4] px-6 py-3 rounded-none font-semibold text-lg hover:bg-[#d4af37] transition-colors duration-300">
+        Prenota una Lezione di Prova
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Arashi Sports Club. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</div>

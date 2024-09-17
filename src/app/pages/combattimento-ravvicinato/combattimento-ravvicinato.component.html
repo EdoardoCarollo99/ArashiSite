@@ -1,0 +1,62 @@
+<div class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-center">
+        <span class="text-[#c41e3a]">Combattimento Ravvicinato</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">L'Arte della Difesa Efficace</h2>
+      <p class="mb-4">Il Combattimento Ravvicinato è un sistema di autodifesa moderno che si concentra sulle tecniche più efficaci per situazioni di pericolo reale. Combinando elementi di varie arti marziali e sistemi di combattimento militari, questo corso offre una preparazione completa per affrontare minacce in spazi ristretti e situazioni ad alto rischio.</p>
+      <p>L'obiettivo principale è fornire agli studenti gli strumenti per proteggersi e reagire rapidamente in caso di aggressione, sviluppando al contempo una mentalità di prevenzione e consapevolezza del pericolo.</p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Principi Fondamentali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Efficienza e Semplicità</h3>
+          <p>Le tecniche insegnate sono semplici da apprendere e applicare, focalizzandosi su movimenti naturali e istintivi per una massima efficacia in situazioni di stress.</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-3">Adattabilità</h3>
+          <p>Gli studenti imparano a adattarsi rapidamente a diverse situazioni e ambienti, sviluppando la capacità di rispondere efficacemente a minacce impreviste.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Tecniche Principali</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let technique of techniques" class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-2">{{ technique.name }}</h3>
+          <p>{{ technique.description }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Benefici del Combattimento Ravvicinato</h2>
+      <ul class="list-disc pl-6 space-y-2">
+        <li *ngFor="let benefit of benefits">{{ benefit }}</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Unisciti al Nostro Corso</h2>
+      <p class="mb-4">Il nostro corso di Combattimento Ravvicinato è adatto a tutti, indipendentemente dall'esperienza precedente nelle arti marziali. Che tu sia un principiante in cerca di competenze di autodifesa o un praticante esperto che desidera affinare le proprie abilità, il nostro programma è strutturato per soddisfare le tue esigenze.</p>
+      <a href="#" class="inline-block bg-[#c41e3a] text-[#f4f4f4] px-6 py-3 rounded-none font-semibold text-lg hover:bg-[#d4af37] transition-colors duration-300">
+        Prenota una Lezione di Prova
+      </a>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Arashi Sports Club. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</div>
