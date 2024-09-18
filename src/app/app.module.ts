@@ -10,6 +10,7 @@ import { FitBoxeComponent } from './pages/fit-boxe/fit-boxe.component';
 import { DifesaPersonaleComponent } from './pages/difesa-personale/difesa-personale.component';
 import { SprayPeperoncinoComponent } from './pages/spray-peperoncino/spray-peperoncino.component';
 import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.component';
+import { IscrizioneComponent } from './pages/iscrizione/iscrizione.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CookieBannerComponent } from './components/cookie-banner/cookie-banner.
     DifesaPersonaleComponent,
     SprayPeperoncinoComponent,
     CookieBannerComponent,
+    IscrizioneComponent,
   ],
   imports: [
     BrowserModule,

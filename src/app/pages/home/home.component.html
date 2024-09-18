@@ -8,6 +8,7 @@
         <a href="#disciplines" class="hover:text-[#d4af37] transition-colors duration-300">Discipline</a>
         <a href="#schedule" class="hover:text-[#d4af37] transition-colors duration-300">Orario</a>
         <a href="#contact" class="hover:text-[#d4af37] transition-colors duration-300">Contatto</a>
+        <a  class="hover:text-[#d4af37] transition-colors duration-300" (click)="navigateTo('/iscrizione')">Iscrizione</a>
       </div>
       <button (click)="toggleMobileMenu()" class="md:hidden">
         <i class="fas" [ngClass]="{'fa-times': mobileMenuOpen, 'fa-bars': !mobileMenuOpen}"></i>
@@ -17,6 +18,7 @@
       <a href="#disciplines" class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300">Discipline</a>
       <a href="#schedule" class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300">Orario</a>
       <a href="#contact" class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300">Contatto</a>
+      <a class="block px-4 py-2 hover:bg-[#c41e3a] transition-colors duration-300" (click)="navigateTo('/iscrizione')">Iscrizione</a>
     </div>
   </header>
 
@@ -135,6 +137,7 @@
             <li><a href="#disciplines" class="hover:text-[#c41e3a] transition-colors duration-300">Discipline</a></li>
             <li><a href="#schedule" class="hover:text-[#c41e3a] transition-colors duration-300">Orario</a></li>
             <li><a href="#contact" class="hover:text-[#c41e3a] transition-colors duration-300">Contatto</a></li>
+            <li><a class="hover:text-[#c41e3a] transition-colors duration-300" (click)="navigateTo('/iscrizione')">Iscrizione</a></li>
           </ul>
         </div>
         <div>

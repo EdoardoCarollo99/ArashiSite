@@ -6,6 +6,7 @@ import { CombattimentoRavvicinatoComponent } from './pages/combattimento-ravvici
 import { FitBoxeComponent } from './pages/fit-boxe/fit-boxe.component';
 import { DifesaPersonaleComponent } from './pages/difesa-personale/difesa-personale.component';
 import { SprayPeperoncinoComponent } from './pages/spray-peperoncino/spray-peperoncino.component';
+import { IscrizioneComponent } from './pages/iscrizione/iscrizione.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Rotta di default che reindirizza alla Home Page
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'combattimentoravvicinato', component: CombattimentoRavvicinatoComponent },
   { path: 'fitboxe', component: FitBoxeComponent },
   { path: 'difesaperonale', component: DifesaPersonaleComponent },
-  { path: 'sprypeporoncino', component: SprayPeperoncinoComponent },              // Rotta per la Home Page
+  { path: 'sprypeporoncino', component: SprayPeperoncinoComponent },
+  { path: 'iscrizione', component: IscrizioneComponent },               // Rotta per la Home Page
   // Altre rotte possono essere aggiunte qui
 ];
 

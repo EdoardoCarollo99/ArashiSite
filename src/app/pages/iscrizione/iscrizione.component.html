@@ -1,0 +1,67 @@
+<div class="min-h-screen bg-[#f4f4f4] text-[#1a1a1a] font-sans">
+  <header class="bg-[#1a1a1a] text-[#f4f4f4] py-6">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-6xl font-bold text-center">
+        <span class="text-[#c41e3a]">Iscrizione</span>
+      </h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-12">
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 text-[#c41e3a]">Unisciti all'Arashi Sports Club</h2>
+      <p class="mb-4">
+        Siamo entusiasti che tu abbia deciso di unirti alla nostra comunità di appassionati di arti marziali e fitness.
+        L'iscrizione all'Arashi Sports Club ti darà accesso a:
+      </p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li *ngFor="let vantaggio of vantaggi">{{ vantaggio }}</li>
+      </ul>
+      <p class="mb-4">
+        Per completare la tua iscrizione, utilizza il modulo qui sotto. Se hai domande durante il processo,
+        non esitare a contattarci.
+      </p>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4 text-[#c41e3a]">Processo di Iscrizione</h3>
+      <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+        <ol class="list-decimal pl-6 space-y-2">
+          <li *ngFor="let passo of passiIscrizione">{{ passo }}</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4 text-[#c41e3a]">Modulo di Iscrizione</h3>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <iframe
+          src="https://gestionale.asso360.it/NTUyNg==/soci/iscriviti"
+          title="Modulo di iscrizione Arashi Sports Club"
+          class="w-full h-[600px] border-0">
+        </iframe>
+      </div>
+    </section>
+
+    <section>
+      <h3 class="text-2xl font-semibold mb-4 text-[#c41e3a]">Hai bisogno di aiuto?</h3>
+      <p class="mb-4">
+        Se hai domande o incontri difficoltà durante il processo di iscrizione, siamo qui per aiutarti.
+        Contattaci tramite:
+      </p>
+      <ul class="list-disc pl-6 space-y-2">
+        <li *ngFor="let contatto of contattiSupporto">
+          {{ contatto.tipo }}:
+          <a *ngIf="contatto.link" [href]="contatto.link" class="text-[#c41e3a] hover:underline">{{ contatto.valore }}</a>
+          <span *ngIf="!contatto.link">{{ contatto.valore }}</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="bg-[#1a1a1a] text-[#f4f4f4] py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2023 Arashi Sports Club. Tutti i diritti riservati.</p>
+    </div>
+  </footer>
+</div>
